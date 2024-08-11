@@ -7,7 +7,8 @@ export interface CourseDto {
     credits:         number;
     professor:       ProfessorDto;
     enrollmentsList: EnrollmentDto[];
-    descripcion: string; // Añade esta línea
+    descripcion: string; // nuevo campo
+    imagen: string; // nuevo campo
 }
 
 

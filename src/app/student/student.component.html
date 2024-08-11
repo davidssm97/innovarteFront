@@ -1,0 +1,22 @@
+<section>
+    @if (isLoggedIn) {
+        <p>Bienvenido, {{studentName}} </p>
+        <img 
+        (click)="greet()"
+        src="https://github.com/davidssm97.png" 
+        alt="photo">
+    }@else{
+        <p>¡Inicia sesion!</p>
+        <button (click)="isLoggedIn = true">Log In</button>
+    }
+    <app-courses
+    (addFavortieEvent)="getFavorite($event)" 
+        studentName="{{studentName}}"></app-courses>
+
+    @if (favCourse !== '') {
+        <p>tu curso es {{favCourse}}</p>
+    }
+</section>
+
+
+
